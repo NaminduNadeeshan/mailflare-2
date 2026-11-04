@@ -1,6 +1,6 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "mailflare",
+	"name": "mailflare2",
 	"main": "./worker.ts",
 	"compatibility_date": "2026-05-20",
 	"keep_vars": true,
@@ -18,7 +18,7 @@
 	"services": [
 		{
 			"binding": "WORKER_SELF_REFERENCE",
-			"service": "mailflare",
+			"service": "mailflare2",
 		},
 	],
 	"durable_objects": {
@@ -76,13 +76,13 @@
 		{
 			"binding": "DB",
 			"database_name": "mailflare",
-			"migrations_dir": "drizzle/migrations",
+			"migrations_dir": "drizzle/migrations","database_id": "8eb3bd47-9a72-44be-ac8f-c512d0ade44a",
 		},
 	],
 	"r2_buckets": [
 		{
 			"binding": "BUCKET",
-			"bucket_name": "mailflare-raw",
+			"bucket_name": "mailflare-raw","preview_bucket_name": "mailflare-raw",
 		},
 	],
 	"queues": {
